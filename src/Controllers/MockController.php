@@ -31,17 +31,24 @@ class MockController extends Controller
     public function getRoutes()
     {
         $directory = public_path('/../app/Mock/Interfaces');
+    
+        if (!is_dir($directory)) {
+            mkdir($directory, 0755, true); 
+        }
+    
         $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
         $routes = [];
+    
         foreach ($iterator as $file) {
             if ($file->isFile() && $file->getExtension() === 'php') {
                 $interface = $this->createNamespace($file, $directory);
                 $interfaceRoutes = $this->getFunctionsFromInterface($interface);
-                if($interfaceRoutes) {
+                if ($interfaceRoutes) {
                     $routes = array_merge($routes, $interfaceRoutes);
                 }
             }
         }
+    
         return $routes;
     }
 
