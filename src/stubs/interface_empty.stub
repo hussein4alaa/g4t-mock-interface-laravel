@@ -1,0 +1,9 @@
+<?php
+
+namespace App\Mock\Interfaces;
+use Illuminate\Http\Request;
+
+interface {{class_name}}
+{
+    
+}

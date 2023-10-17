@@ -1,0 +1,43 @@
+<?php
+
+namespace App\Mock\Interfaces;
+use Illuminate\Http\Request;
+
+interface {{class_name}}
+{
+    /**
+     * @route api/{{url}}
+     * @method get
+     * @return Post \App\Mock\Schemas\{{ListSchema}}[paginate]
+     */
+    public function index();
+
+    /**
+     * @route api/{{url}}/{id}
+     * @method get
+     * @return Post \App\Mock\Schemas\{{ShowSchema}}
+     */
+    public function show(int $id);
+    
+    /**
+     * @route api/{{url}}
+     * @method post
+     * @return Post \App\Mock\Schemas\{{CreateSchema}}
+     */
+    public function store(Request $request);
+
+    /**
+     * @route api/{{url}}/{id}
+     * @method put
+     * @return Post \App\Mock\Schemas\{{UpdateSchema}}
+     */
+    public function update(int $id, Request $request);
+
+    /**
+     * @route api/{{url}}/{id}
+     * @method delete
+     * @return Post \App\Mock\Schemas\{{DeleteSchema}}
+     */
+    public function destroy(int $id);
+    
+}

@@ -1,0 +1,26 @@
+{
+    "name": "g4t/mock-interface",
+    "require": {
+        "phpdocumentor/reflection-docblock": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "G4T\\MockInterface\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hussein Alaa",
+            "email": "hussein4alaa@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "G4T\\MockInterface\\MockServiceProvider"
+            ]
+        }
+    }
+}
