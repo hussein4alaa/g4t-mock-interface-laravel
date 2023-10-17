@@ -1,4 +1,4 @@
-# G4T Mock Interface Laravel Package
+# G4T Mock Interface Laravel
 
 ![Packagist Version](https://img.shields.io/packagist/v/hussein4alaa/g4t-mock-interface-laravel)
 ![GitHub](https://img.shields.io/github/license/hussein4alaa/g4t-mock-interface-laravel)
