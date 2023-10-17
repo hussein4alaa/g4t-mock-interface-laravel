@@ -13,16 +13,6 @@ You can easily integrate this package into your Laravel project using Composer. 
 composer require g4t/mock-interface
 ```
 
-Next, register the service provider in your config/app.php:
-
-```bash
-'providers' => [
-    // ...
-    G4T\MockInterface\MockServiceProvider::class,
-    // ...
-],
-```
-
 ## Usage
 The G4T Mock Interface Laravel Package offers a wide array of features to facilitate the management of mock interfaces in your Laravel application. Here's how you can get started:
 
